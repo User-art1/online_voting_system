@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('https://e1.pxfuel.com/desktop-wallpaper/721/613/desktop-wallpaper-abstract-login-page.jpg');
+background-size:cover;
+font-family:Arial;
+}
+
+.box{
+padding:40px;
+text-align:center;
+color:white;
+}
+
+input{
+padding:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Admin Login</h2>
+
+<input id="user" placeholder="Username"><br><br>
+<input id="pass" type="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+</div>
+
+<script>
+
+function login(){
+
+let u=document.getElementById("user").value;
+let p=document.getElementById("pass").value;
+
+const ADMIN = {
+    user: "admin",
+    pass: "admin123"
+};
+if(u=="admin" && p=="admin123")
+location.href="admin_dashboard.html";
+
+else
+alert("Invalid Login");
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
