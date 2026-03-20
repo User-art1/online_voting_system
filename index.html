@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>🗳️ SmartVote</h1>
+<p>Secure Digital Voting System</p>
+<title>Online Voting System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background-image:url('https://wise.com/imaginary-v2/1e532c6a4fd9ca2c03ff1b267c282ef2.jpg?width=1200');
+background-size:cover;
+color:black;
+text-align:center;
+}
+
+.container{
+padding:40px;
+border-radius:10px;
+}
+
+h1{
+margin-bottom:10px;
+}
+
+.steps{
+text-align:center;
+margin:20px 0;
+font-size:18px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.start{background:green;color:white;}
+.admin{background:#1e90ff;color:white;}
+.logout{background:red;color:white;}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="progress">
+    <div class="bar" id="progressBar"></div>
+</div>
+
+<div class="container">
+
+<h2>Welcome to Online Voting System</h2>
+
+<h3>Voting Steps:</h3>
+
+<div class="steps">
+<p>1️⃣ Aadhaar Verification</p>
+<p>2️⃣ Voter ID Verification</p>
+<p>3️⃣ Voter Details Verified</p>
+<p>4️⃣ Face Recognition</p>
+<p>5️⃣ Fingerprint Authentication</p>
+<p>6️⃣ Select Candidate</p>
+<p>7️⃣ Vote Submitted</p>
+</div>
+
+<button class="start" onclick="location.href='aadhaar.html'">Start Voting</button>
+
+<button class="admin" onclick="location.href='admin_login.html'">Admin Dashboard</button>
+
+<button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+function logout(){
+alert("Logged out successfully");
+window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
