@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Face Recognition</title>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+padding-top: 20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('https://i.pinimg.com/originals/12/e8/a6/12e8a6a547e317524121f7a5d6084036.gif');
+background-size:cover;
+font-family:Arial;
+text-align:center;
+color:white;
+}
+
+video{
+width:350px;
+border:3px solid lime;
+}
+
+button{
+padding:12px 25px;
+background:green;
+color:white;
+border:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="progress">
+    <div class="bar" id="progressBar"></div>
+</div>
+
+<div class="steps-bar">
+    <div class="step" id="step1">1</div>
+    <div class="step" id="step2">2</div>
+    <div class="step" id="step3">3</div>
+    <div class="step" id="step4">4</div>
+    <div class="step" id="step5">5</div>
+    <div class="step" id="step6">6</div>
+    <div class="step" id="step7">7</div>
+</div>
+
+<div>
+
+<h2>Face Recognition</h2>
+
+<video id="video" autoplay></video>
+
+<p id="msg">Scanning face...</p>
+
+<button id="next" style="display:none;" onclick="location.href='fingerprint.html'">Next</button>
+
+</div>
+
+
+
+<script>
+document.getElementById("step1").classList.add("done");
+document.getElementById("step2").classList.add("done");
+document.getElementById("step3").classList.add("done");
+document.getElementById("step4").classList.add("active");
+</script>
+
+<script>
+document.getElementById("progressBar").style.width = "57%";
+</script>
+
+<script>
+
+navigator.mediaDevices.getUserMedia({video:true})
+.then(stream=>{
+document.getElementById("video").srcObject=stream;
+});
+
+setTimeout(()=>{
+document.getElementById("msg").innerHTML="Face Verified ✔";
+document.getElementById("next").style.display="inline-block";
+},4000);
+
+</script>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
