@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fingerprint</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+padding-top: 20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('https://i.pinimg.com/originals/49/8e/01/498e01faaf88bee2ca08a0f2acf8c7e1.gif');
+background-size:cover;
+font-family:Arial;
+text-align:center;
+color:white;
+}
+
+button{
+padding:12px 25px;
+background:green;
+color:white;
+border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress">
+    <div class="bar" id="progressBar"></div>
+</div>
+
+<div class="steps-bar">
+    <div class="step" id="step1">1</div>
+    <div class="step" id="step2">2</div>
+    <div class="step" id="step3">3</div>
+    <div class="step" id="step4">4</div>
+    <div class="step" id="step5">5</div>
+    <div class="step" id="step6">6</div>
+    <div class="step" id="step7">7</div>
+</div>
+
+<div>
+
+<h2>Fingerprint Verified ✔</h2>
+
+<button onclick="location.href='vote.html'">Proceed</button>
+
+</div>
+
+
+
+<script>
+document.getElementById("step1").classList.add("done");
+document.getElementById("step2").classList.add("done");
+document.getElementById("step3").classList.add("done");
+document.getElementById("step4").classList.add("done");
+document.getElementById("step5").classList.add("active");
+</script>
+
+<script>
+document.getElementById("progressBar").style.width = "71%";
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
