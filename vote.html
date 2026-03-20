@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vote</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+padding-top: 20px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url('https://st.depositphotos.com/1052036/4354/v/950/depositphotos_43542541-stock-illustration-hand-with-voting-sign-of.jpg');
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+font-family:Arial;
+text-align:center;
+color:black;
+}
+
+.candidate{
+display:block;
+margin:15px;
+padding:15px;
+border-radius:10px;
+background:rgba(255,255,255,0.2);
+cursor:pointer;
+}
+
+.candidate:hover{
+background:rgba(0,255,0,0.3);
+}
+
+button{
+padding:12px 25px;
+background:green;
+color:white;
+border:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="progress">
+    <div class="bar" id="progressBar"></div>
+</div>
+
+<div class="steps-bar">
+    <div class="step" id="step1">1</div>
+    <div class="step" id="step2">2</div>
+    <div class="step" id="step3">3</div>
+    <div class="step" id="step4">4</div>
+    <div class="step" id="step5">5</div>
+    <div class="step" id="step6">6</div>
+    <div class="step" id="step7">7</div>
+</div>
+
+<div class="container">
+
+<h2>Select Candidate</h2>
+
+<input type="radio" name="candidate" value="A"> Candidate A<br><br>
+<input type="radio" name="candidate" value="B"> Candidate B<br><br>
+<input type="radio" name="candidate" value="C"> Candidate C<br><br>
+
+<button onclick="submitVote()">Submit Vote</button>
+
+</div>
+
+
+
+<script>
+document.getElementById("step1").classList.add("done");
+document.getElementById("step2").classList.add("done");
+document.getElementById("step3").classList.add("done");
+document.getElementById("step4").classList.add("done");
+document.getElementById("step5").classList.add("done");
+document.getElementById("step6").classList.add("active");
+</script>
+
+<script>
+document.getElementById("progressBar").style.width = "85%";
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
