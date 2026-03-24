@@ -169,3 +169,18 @@ body {
     background: #00ff99;
 }
 
+.details-glass {
+    width: 320px;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    color: black;
+}
